@@ -331,6 +331,10 @@ globalkeys = gears.table.join(
     -- RANDOM SHITE
     awful.key({ modkey,           }, "d", function () awful.spawn("dmenu_run") end,
               {description = "open dmenu prompt", group = "launcher"}),
+    awful.key({ modkey,           }, "§", function () awful.screen.focus_relative( 1) end,
+              {description = "focus next screen", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "§", function () awful.screen.focus_relative(-1) end,
+              {description = "focus previous screen", group = "launcher"}),
 
 
     -- Prompt
